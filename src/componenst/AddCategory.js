@@ -39,7 +39,7 @@ export const AddCategory = ({ setCategorias }) => {
                 </div>
                 <div id='numberGifs'>
                     <label>
-                        Cantidad
+                        Lote
                         <input
                             placeholder='Cantidad'
                             type='text'
@@ -50,10 +50,15 @@ export const AddCategory = ({ setCategorias }) => {
                         />
                     </label>
                 </div>
-                <input type="submit" id="submitbtn" />
+                <div id='divEnter'>
+                    <label>
+                        <br />
+                        <input type="submit" id="btnForm" value="Enter" />
+                    </label>
+                </div>
                 <br id='brGifs' />
+
             </div>
-            <div>{inputValue} ({inputNumberValue})</div>
         </form>
     )
 }
