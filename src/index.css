@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 50px;
+  padding: 5% 7% 7% 7%;
   background-color: #202124;
   color: azure;
 }
@@ -21,21 +21,21 @@ input {
   color: darkblue;
 }
 #textGifs {
-  width: 78%;
+  width: 73%;
   float: left;
 }
 #numberGifs {
-  width: 11%;
+  width: 14%;
   float: left;
 }
 #divEnter {
-  width: 11%;
+  width: 13%;
   float: left;
   /* background-color: blue; */
 }
 #formGif {
   width: 100%;
-  height: 100%;      
+  height: 100%;
   display: flex;
   align-items: center;
 }
@@ -88,12 +88,14 @@ input {
   text-shadow: 1px 1px 1px #000;
   border-radius: 3px;
   background-color: rgba(220, 0, 0, 1);
-  background-image: linear-gradient(to top left,
-                                    rgba(0, 0, 0, .2),
-                                    rgba(0, 0, 0, .2) 30%,
-                                    rgba(0, 0, 0, 0));
-  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-              inset -2px -2px 3px rgba(0, 0, 0, .6);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow: inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
 }
 
 #btnForm:hover {
@@ -101,7 +103,6 @@ input {
 }
 
 #btnForm:active {
-  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-              inset 2px 2px 3px rgba(0, 0, 0, .6);
+  box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
-
