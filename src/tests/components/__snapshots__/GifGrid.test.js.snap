@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en componente <GifGrid /> should mostrar items cuando se cargan imágenes useFecthGifs 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__bounceIn"
+  >
+    illogical immaterial human eternity
+     (
+    3
+    )
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="JhZcAuGjuDmZq"
+      key="JhZcAuGjuDmZq"
+      title="happy amy poehler GIF by Disney"
+      url="https://media0.giphy.com/media/JhZcAuGjuDmZq/giphy.gif?cid=8d830538qq68sxtbhmrpm2f49dg18f0m2svlora5xr35t2f4&rid=giphy.gif"
+    />
+    <GifGridItem
+      id="123JhZcAuGjuDmZq"
+      key="123JhZcAuGjuDmZq"
+      title="happy amy poehler GIF by Disney"
+      url="https://media0.giphy.com/media/JhZcAuGjuDmZq/giphy.gif?cid=8d830538qq68sxtbhmrpm2f49dg18f0m2svlora5xr35t2f4&rid=giphy.gif"
+    />
+  </div>
+</Fragment>
+`;
+
+exports[`Pruebas en componente <GifGrid /> should toMatchSnapshot correctamente 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__bounceIn"
+  >
+    illogical immaterial human eternity
+     (
+    3
+    )
+  </h3>
+  <p
+    className="animate__animated animate__flash"
+  >
+    Loading...
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;

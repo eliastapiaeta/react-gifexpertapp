@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba en GrifGridItem.js should return object::tag<html> 1`] = `
+<div
+  className="card animate__animated animate__fadeInLeft"
+>
+  <img
+    alt="happy amy poehler GIF by Disney"
+    id="JhZcAuGjuDmZq"
+    src="https://media0.giphy.com/media/JhZcAuGjuDmZq/giphy.gif?cid=8d830538qq68sxtbhmrpm2f49dg18f0m2svlora5xr35t2f4&rid=giphy.gif"
+  />
+  <p>
+    happy amy poehler GIF by Disney
+  </p>
+</div>
+`;

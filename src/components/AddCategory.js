@@ -39,13 +39,21 @@ export const AddCategory = ({ setCategorias }) => {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
+        // console.log('handleSubmit', inputValue);
 
         if (inputValue.trim().length > 2) {
             const inputNum = (inputNumberValue !== "") && inputNumberValue;
+
+            // console.log('inputNum: ' + inputNum);
+
             if (inputNum) {
+                // console.log('submit OK');
+                // console.log('inputValue ', inputValue, 'typeof inputValue', typeof inputValue);
+                // console.log('inputNumberValue ', inputNumberValue, 'typeof inputNumberValue', typeof inputNumberValue);
+
                 setCategorias(cats => [{ num: inputNumberValue, cat: inputValue }, ...cats]);
                 setinputValue('');
-            } 
+            }
         }
 
     }
@@ -54,17 +62,22 @@ export const AddCategory = ({ setCategorias }) => {
         const valNull = (valNaN !== null) && valNaN;
         const regex = /(\d+)/g;
 
-        // console.log('valNaN: ' + valNaN);
-        // console.log('valNull: ' + valNull);
+        // console.log('valNaN: ' + valNaN + ' typeof: ' + typeof valNaN);
+        // console.log('valNull: ' + valNull + ' typeof: ' + typeof valNull);
 
-        const num = valNull ? valNull.match(regex) : null;
+        const valString = (typeof valNull !== 'string') ? valNull.toString() : valNull;
+
+        // console.log('valString: ' + valString + ' typeof: ' + typeof valString);
+
+        const num = valString ? valString.match(regex) : null;
         const haveNumber = (num !== null) && num;
 
         // console.log('num:::: ' + typeof haveNumber + ' ' + haveNumber);
 
-        const resul = (haveNumber) && (haveNumber.toString()).substring(0, cantidad);
+        const resulString = (haveNumber) && (haveNumber.toString()).substring(0, cantidad);
+        const resulNumber = Number(resulString);
 
-        return resul;
+        return resulNumber;
     }
     const numtext = (val) => {
         let out = '';
@@ -76,7 +89,7 @@ export const AddCategory = ({ setCategorias }) => {
                 out += val.charAt(i);
         return out;
     }
-    const limLengthStr = (valor: String, limite: Number) => {
+    const limLengthStr = (valor, limite) => {
         // console.log(limite);
         const vmin = 0;
         const vmax = valor.length;
@@ -94,10 +107,11 @@ export const AddCategory = ({ setCategorias }) => {
                     <label>
                         Imagen
                         <input
+                            id="inText"
                             placeholder='Imagen a buscar'
                             type='text'
                             maxLength='25'
-                            pattern="[A-Za-z0-9]{1,30}"
+                            pattern="[A-Za-z0-9 ]{1,30}"
                             value={inputValue}
                             onChange={handleInputChangeText}
                         />
@@ -107,6 +121,7 @@ export const AddCategory = ({ setCategorias }) => {
                     <label>
                         Lote
                         <input
+                            id='inNum'
                             placeholder='n°'
                             type='text'
                             maxLength='3'

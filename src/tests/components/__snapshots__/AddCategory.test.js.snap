@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en el componente <AddCategory /> should mostrarse correctamente 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    id="formGif"
+  >
+    <div
+      id="textGifs"
+    >
+      <label>
+        Imagen
+        <input
+          id="inText"
+          maxLength="25"
+          onChange={[Function]}
+          pattern="[A-Za-z0-9 ]{1,30}"
+          placeholder="Imagen a buscar"
+          type="text"
+          value=""
+        />
+      </label>
+    </div>
+    <div
+      id="numberGifs"
+    >
+      <label>
+        Lote
+        <input
+          id="inNum"
+          maxLength="3"
+          onChange={[Function]}
+          pattern="[0-9]{1,2}"
+          placeholder="n°"
+          type="text"
+          value={10}
+        />
+      </label>
+    </div>
+    <div
+      id="divEnter"
+    >
+      <label>
+        <br />
+        <input
+          id="btnForm"
+          type="submit"
+          value="Ok"
+        />
+      </label>
+    </div>
+    <br
+      id="brGifs"
+    />
+  </div>
+</form>
+`;
